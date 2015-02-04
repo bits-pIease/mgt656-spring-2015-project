@@ -15,6 +15,11 @@ function index (request, response) {
   response.render('index.html', contextData);
 }
 
+function sprint(request, response){
+  response.render('sprint.html');
+}
+
 module.exports = {
-  index: index
+  index: index,
+  'sprint': sprint
 };
