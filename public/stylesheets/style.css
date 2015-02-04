@@ -10,3 +10,10 @@ a {
 .form-errors {
 	color: red;
 }
+.sprintheader{
+  text-align: center;
+  text-decoration: underline;
+}
+.teammember{
+  text-align: center;
+}
