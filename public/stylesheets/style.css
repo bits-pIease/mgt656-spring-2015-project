@@ -17,3 +17,12 @@ a {
 .teammember{
   text-align: center;
 }
+.footer{
+  background-color: #001f3f;
+}
+.header{
+  background-color: #DDDDDD;
+}
+.name{
+  font-weight: bold;
+}
