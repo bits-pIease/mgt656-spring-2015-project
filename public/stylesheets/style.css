@@ -21,6 +21,8 @@ a {
   background-color: #001f3f;
 }
 .header{
+  top:0px;
+  position: relative;
   background-color: #DDDDDD;
 }
 .name{
