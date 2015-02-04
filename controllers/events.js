@@ -41,6 +41,38 @@ function listEvents(request, response) {
   response.render('event.html', contextData);
 }
 
+function validateString(request, name, minVal, maxVal, contextData){
+  var value = null;
+  if (validator.isLength(request.body[name], minVal, maxVal) === false) {
+    contextData.errors.push('Your ' + name + ' must be between 1 and 50 characters.');
+  }
+  else {
+    value = request.body[name];
+  }
+  return value;
+}
+
+function validateInt(request, name, minVal, maxVal, contextData){
+  var value = null;
+  if (validator.isInt(request.body[name]) === false) {
+    contextData.errors.push('Your ' + name + ' must be an integer.');
+  }
+  else {
+    value = parseInt(request.body[name], 10);
+    if (name === 'minute') {
+      if (value !== minVal && value !== maxVal) {
+        contextData.errors.push('Your ' + name + ' must be ' + minVal + ' or ' + maxVal + '.');
+      }
+    }
+    else {
+      if (value < minVal || value > maxVal) {
+        contextData.errors.push('Your ' + name + ' must be between ' + minVal + ' and ' + maxVal + '.');
+      }
+    }
+  }
+  return value; 
+}
+
 /**
  * Controller that renders a page for creating new events.
  */
@@ -57,10 +89,21 @@ function newEvent(request, response){
 function saveEvent(request, response){
   var contextData = {errors: []};
 
-  if (validator.isLength(request.body.title, 5, 50) === false) {
-    contextData.errors.push('Your title should be between 5 and 100 letters.');
+  if (validator.isURL(request.body.image, {protocols: ['http','https'], require_protocol: true }) === false) {
+    contextData.errors.push('Your image URL must begin with http:// or https://.');
+  }
+  var URL = request.body.image; 
+  if (URL.match(/\.(png|gif)$/) === null) {
+    contextData.errors.push('Your image URL must end with .gif or .png.');
   }
 
+  var title = validateString(request, 'title', 1, 50, contextData);
+  var location = validateString(request, 'location', 1, 50, contextData);
+  var year = validateInt(request, 'year', 2015, 2016, contextData);
+  var month = validateInt(request, 'month', 0, 11, contextData);
+  var day = validateInt(request, 'day', 1, 31, contextData);
+  var hour = validateInt(request, 'hour', 0, 23, contextData);
+  var minute = validateInt(request, 'minute', 0, 30, contextData)
 
   if (contextData.errors.length === 0) {
     var newEvent = {
