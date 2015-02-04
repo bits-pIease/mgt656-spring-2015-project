@@ -88,7 +88,6 @@ function newEvent(request, response){
  */
 function saveEvent(request, response){
   var contextData = {errors: []};
-
   if (validator.isURL(request.body.image, {protocols: ['http','https'], require_protocol: true }) === false) {
     contextData.errors.push('Your image URL must begin with http:// or https://.');
   }
@@ -103,8 +102,7 @@ function saveEvent(request, response){
   var month = validateInt(request, 'month', 0, 11, contextData);
   var day = validateInt(request, 'day', 1, 31, contextData);
   var hour = validateInt(request, 'hour', 0, 23, contextData);
-  var minute = validateInt(request, 'minute', 0, 30, contextData)
-
+  var minute = validateInt(request, 'minute', 0, 30, contextData);
   if (contextData.errors.length === 0) {
     var newEvent = {
       title: request.body.title,
@@ -131,7 +129,7 @@ function eventDetail (request, response) {
 function rsvp (request, response){
   var ev = events.getById(parseInt(request.params.id));
   if (ev === null) {
-    response.status(404).send('No such event');
+    response.status(404).send('No such 1event');
   }
 
   if(validator.isEmail(request.body.email)){
