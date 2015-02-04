@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block mainContent %}
+
+    <h1>Hello world</h1>
+    {{event.title}}
+    <img src={{event.image}}>
+    
+  <!--  {% if errors %}-->
+  <!--  <div class="form-errors">-->
+  <!--    <p>Please correct the following errors!</p>-->
+  <!--    <ul>-->
+  <!--      {% for error in errors %}-->
+  <!--        <li>{{error}}</li>-->
+  <!--      {% endfor %}-->
+  <!--    </ul>-->
+  <!--  </div>-->
+  <!--{% endif %}-->
+    <h2> RSVP?</h2>
+	<form id="rsvptoevent" method="POST">
+        <label for="email">Your email:</label>
+        <input type="email" name="email">
+        <input type="submit" value="RSVP">
+    </form>
+{% endblock %}
