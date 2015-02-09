@@ -73,7 +73,7 @@ function validateInt(request, name, minVal, maxVal, contextData){
   return value; 
 }
 
-/**
+/*
  * Controller that renders a page for creating new events.
  */
 function newEvent(request, response){
@@ -81,13 +81,14 @@ function newEvent(request, response){
   response.render('create-event.html', contextData);
 }
 
-/**
+/*
  * Controller to which new events are submitted.
  * Validates the form and adds the new event to
  * our global list of events.
  */
 function saveEvent(request, response){
   var contextData = {errors: []};
+  
   if (validator.isURL(request.body.image, {protocols: ['http','https'], require_protocol: true }) === false) {
     contextData.errors.push('Your image URL must begin with http:// or https://.');
   }
@@ -103,6 +104,7 @@ function saveEvent(request, response){
   var day = validateInt(request, 'day', 1, 31, contextData);
   var hour = validateInt(request, 'hour', 0, 23, contextData);
   var minute = validateInt(request, 'minute', 0, 30, contextData);
+  
   if (contextData.errors.length === 0) {
     var newEvent = {
       id: events.all.length + 1,
@@ -130,9 +132,9 @@ function eventDetail (request, response) {
 function rsvp (request, response){
   var ev = events.getById(parseInt(request.params.id));
   if (ev === null) {
-    response.status(404).send('No such 1event');
+    response.status(404).send('No such event');
   }
-  if(validator.isEmail(request.body.email) && request.body.email.toLowerCase().indexOf("yale.edu") != -1){
+  if(validator.isEmail(request.body.email) && request.body.email.toLowerCase().indexOf("yale.edu") !== -1){
     ev.attending.push(request.body.email);
     response.redirect('/events/' + ev.id);
   }else{
@@ -140,13 +142,13 @@ function rsvp (request, response){
     contextData.errors.push('Invalid email');
     response.render('event-detail.html', contextData);    
   }
-
 }
-function api(request, response){
+
+function api (request, response){
   var output = {events: []};
   var search = request.query.search;
   if(search){
-    for(var i=0; i< events.all.length; i++){
+    for(var i = 0; i < events.all.length; i++){
       if(events.all[i].title.indexOf(search) !== -1){
         output.events.push(events.all[i]);
       }
@@ -154,11 +156,10 @@ function api(request, response){
   }else{
     output.events = events.all;
   }
-  
   response.send(output);
 }
 
-/**
+/*
  * Export all our functions (controllers in this case, because they
  * handles requests and render responses).
  */
