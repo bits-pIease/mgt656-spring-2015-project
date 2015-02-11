@@ -25,6 +25,9 @@ function index (request, response) {
 function sprint(request, response){
   response.render('sprint.html');
 }
+function sprint2(request, response){
+  response.render('sprint2.html');
+}
 
 module.exports = {
   index: index,
