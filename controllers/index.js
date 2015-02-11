@@ -31,5 +31,6 @@ function sprint2(request, response){
 
 module.exports = {
   index: index,
-  'sprint': sprint
+  'sprint': sprint,
+  'sprint2' : sprint2
 };

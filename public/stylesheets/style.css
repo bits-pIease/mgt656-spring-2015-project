@@ -13,6 +13,11 @@ a {
   text-align: center;
   text-decoration: underline;
 }
+.date{
+  text-align: center;
+  font: 21px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
 .teammember{
   text-align: center;
 }
