@@ -26,6 +26,6 @@ app.get('/events/:id', eventControllers.eventDetail);
 app.post('/events/:id', eventControllers.rsvp);
 app.get('/api/events', eventControllers.api);
 app.get('/sprint', indexControllers.sprint);
-app.get('/sprint2', indexControllers.sprint2);
+app.get('/sprint_2', indexControllers.sprint_2);
 
 module.exports = app;
