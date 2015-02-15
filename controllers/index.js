@@ -21,7 +21,7 @@ function index (request, response) {
   }
   response.render('index.html', contextData);
 }
-function sprint_2(request, response){
+function sprint2(request, response){
   response.render('sprint2.html');
 }
 function sprint(request, response){
@@ -32,5 +32,5 @@ function sprint(request, response){
 module.exports = {
   index: index,
   'sprint': sprint,
-  'sprint_2': sprint_2
+  'sprint2' : sprint2
 };
