@@ -48,7 +48,13 @@ a {
 }
 .footer{
   color: white;
-  background-color: #001f3f;
+  background-color: #DDDDDD;
+}
+.footerlinks{
+  padding-left: 2%;
+  font-size: 1.5em;
+  font-style: bold;
+  font-family: 'Libre Baskerville', serif;
 }
 .header{
   top:0px;
@@ -96,7 +102,7 @@ a {
   text-align: center;
   font-size: 5em;
   font-style: bold;
-  padding-top: 10%;
+  padding-top: 7%;
   font-family: 'Libre Baskerville', serif;
 }
 .subsplashhead{
@@ -137,15 +143,23 @@ a {
     /* inline-block space fix */
     margin-right:-4px;
 }
+.sprint{
+  padding:2%;
+}
 /*IDs*/
 #logo{
+  padding-left:1%;
   width: 10%;
   height: 10%;
   display: inline-block;
 }
 #head{
-  padding:0;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
   margin:0;
+  font-size: 1.5em;
+  font-style: bold;
+  font-family: 'Libre Baskerville', serif;
 }
 
 #image{
@@ -236,6 +250,7 @@ a {
 /*From Internet*/
 
 .bounce {
+  padding-top: 1%;
   position:absolute;
   left:49%;
   height:50px;

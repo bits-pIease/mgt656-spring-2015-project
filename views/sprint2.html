@@ -1,73 +1,75 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-  <h1 class="sprintheader"> Bits Please Sprint Report #2</h1>
-  <h2 class="date">February 10, 2015</h2>
-  <div class="teammember">
-    <p>Mohammed Abul (mohammed.abul@yale.edu)</p>
-    <p>Henok Addis (henok.addis@yale.edu)</p>
-    <p>Arthur Klisz (arthur.klisz@yale.edu)</p>
-  </div>
-  <img class="img-responsive center-block" src="http://i.imgur.com/lLwoH7G.png">
-  <div>
-    <h3 class="sprintheader">The stories we completed during this sprint 
-                             include:</h3>
-    <ol>
-      <li>Add a select element for each of the year, month, day, hour, and 
-          minute form elements</li>
-      <li>Add an input element to submit a newly created event</li>
-      <li>Redirect the user to the detail page for newly created events
-          (if submitted form is valid)</li>
-      <li>Redirect the user back to the form with errors showing (if submitted
-          form is invalid)</li>
-      <li>Allow the user to RSVP for an event on the event detail page</li>
-      <li>Add Google Analytics to our website</li>
-    </ol>
-  </div>
-  <div>
-    <p>Since our previous sprint, we have worked to finish implementing all of 
-    the remaining functionality of our website for our users. Unlike after our 
-    first sprint, now our users can 1) create new events by submitting a form 
-    for their event and 2) visit an event’s detail page to RSVP for an event.  
-    Additionally, we added Google Analytics to our pages. With Google Analytics,
-    we can now track our users. In an attempt to avoid roadblocks and 
-    challenges, we held a sprint team meeting via Skype at the start of the 
-    sprint and a standup meeting in-person mid-sprint to track our progress, 
-    discuss any difficulties that we had encountered, and outline a plan for the
-    “curveball” (seen by the increase in story points in our burndown chart). 
-    The team faced a challenge in deciding how to address the “curveball” 
-    scenario. At first, we planned to directly implement all necessary features
-    to execute A/B testing and analyze the resulting data from the Google 
-    Analytics platform. However, after understanding more about how the 
-    Google Analytics platform worked, we decided to first implement the general
-    code or the platform to track visitors, and then utilize Google Tag Manager 
-    in our third sprint to track user journey on our website and better 
-    understand which visitors are more likely to trigger carrying tags in our
-    A/B testing process. As during our previous sprint, we coordinated our
-    efforts via the Waffle.io board and communicated via Facebook chat. We are
-    now passing 41 out of 41 tests, according to mocha. 
-    </p>
-  </div>
-  <div>
-    <h3 class="sprintheader">Our current backlog, in order, consists of the 
-                             following: </h3>
-    <ol>
-      <li>Figure out how our traffic breaks down across different segments and 
-          how it flows through our "funnel" from landing to donation</li>
-      <li>Figure out if making the event links on the home page include the word
-          "RSVP" would increase click-through rate</li>
-      <li>Figure out if we should ask people to "donate" or "support" an event 
-          in the the donation link text to increase conversions</li>
-      <li>Make our website actually look awesome</li>
-    </ol>
-  </div>
-  <div>
-    <p>By the end of the third and final sprint, we will use our newly 
-    implemented Google Analytics to track our users, conduct A/B tests related 
-    to click-through rates and conversions, and upgrade our users’ experience by
-    improving the design of our website. We plan to heavily stylize our website 
-    to create the most enjoyable user experience possible. We plan to directly 
-    improve our website features response to the data we collect through the 
-    Google Analytics platform.</p>
+  <div class="sprint">
+    <h1 class="sprintheader"> Bits Please Sprint Report #2</h1>
+    <h2 style = "color: white" class="date">February 10, 2015</h2>
+    <div class="teammember">
+      <p>Mohammed Abul (mohammed.abul@yale.edu)</p>
+      <p>Henok Addis (henok.addis@yale.edu)</p>
+      <p>Arthur Klisz (arthur.klisz@yale.edu)</p>
+    </div>
+    <img class="img-responsive center-block" src="http://i.imgur.com/lLwoH7G.png">
+    <div>
+      <h3 class="sprintheader">The stories we completed during this sprint 
+                               include:</h3>
+      <ol>
+        <li>Add a select element for each of the year, month, day, hour, and 
+            minute form elements</li>
+        <li>Add an input element to submit a newly created event</li>
+        <li>Redirect the user to the detail page for newly created events
+            (if submitted form is valid)</li>
+        <li>Redirect the user back to the form with errors showing (if submitted
+            form is invalid)</li>
+        <li>Allow the user to RSVP for an event on the event detail page</li>
+        <li>Add Google Analytics to our website</li>
+      </ol>
+    </div>
+    <div>
+      <p>Since our previous sprint, we have worked to finish implementing all of 
+      the remaining functionality of our website for our users. Unlike after our 
+      first sprint, now our users can 1) create new events by submitting a form 
+      for their event and 2) visit an event’s detail page to RSVP for an event.  
+      Additionally, we added Google Analytics to our pages. With Google Analytics,
+      we can now track our users. In an attempt to avoid roadblocks and 
+      challenges, we held a sprint team meeting via Skype at the start of the 
+      sprint and a standup meeting in-person mid-sprint to track our progress, 
+      discuss any difficulties that we had encountered, and outline a plan for the
+      “curveball” (seen by the increase in story points in our burndown chart). 
+      The team faced a challenge in deciding how to address the “curveball” 
+      scenario. At first, we planned to directly implement all necessary features
+      to execute A/B testing and analyze the resulting data from the Google 
+      Analytics platform. However, after understanding more about how the 
+      Google Analytics platform worked, we decided to first implement the general
+      code or the platform to track visitors, and then utilize Google Tag Manager 
+      in our third sprint to track user journey on our website and better 
+      understand which visitors are more likely to trigger carrying tags in our
+      A/B testing process. As during our previous sprint, we coordinated our
+      efforts via the Waffle.io board and communicated via Facebook chat. We are
+      now passing 41 out of 41 tests, according to mocha. 
+      </p>
+    </div>
+    <div>
+      <h3 class="sprintheader">Our current backlog, in order, consists of the 
+                               following: </h3>
+      <ol>
+        <li>Figure out how our traffic breaks down across different segments and 
+            how it flows through our "funnel" from landing to donation</li>
+        <li>Figure out if making the event links on the home page include the word
+            "RSVP" would increase click-through rate</li>
+        <li>Figure out if we should ask people to "donate" or "support" an event 
+            in the the donation link text to increase conversions</li>
+        <li>Make our website actually look awesome</li>
+      </ol>
+    </div>
+    <div>
+      <p>By the end of the third and final sprint, we will use our newly 
+      implemented Google Analytics to track our users, conduct A/B tests related 
+      to click-through rates and conversions, and upgrade our users’ experience by
+      improving the design of our website. We plan to heavily stylize our website 
+      to create the most enjoyable user experience possible. We plan to directly 
+      improve our website features response to the data we collect through the 
+      Google Analytics platform.</p>
+    </div>
   </div>
 {% endblock %}

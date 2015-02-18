@@ -29,21 +29,21 @@
 	<body>
 
     {% block header %}
-      <header id="head" class = "navbar navbar-default header"> 
+      <header id="head" class ="navbar navbar-default header"> 
           <ul class="nav navbar-nav navbar-left">
-              <li><a href="/">Bits Please</a></li>
+              <li><a href="/">BITS PLEASE</a></li>
           </ul>
-          <ul style="padding-right: 1%"class="nav nav-pills navbar-right rightmost">
+          <ul style="padding-right: 1%" class="nav nav-pills navbar-right rightmost">
             <li class="dropdown">
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sprints <b class="caret"></b></a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">SPRINTS <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Sprint 1</a></li>
-                <li><a href="#">Sprint 2</a></li>
-                <li><a href="#">Sprint 3</a></li>
+                <li><a href="/sprint">Sprint 1</a></li>
+                <li><a href="/sprint2">Sprint 2</a></li>
+                <li><a href="/sprint3">Sprint 3</a></li>
               </ul>
             </li>
-            <li><a href="/about">About</a></li>
-            <li ><a href="/events">Events</a></li>
+            <li><a href="/about">ABOUT US</a></li>
+            <li ><a href="/events">EVENTS</a></li>
           </ul>
       </header>
     {% endblock %}
@@ -54,13 +54,12 @@
     </div>
     {% block footer %}
       <footer class="footer">
-      <img id="logo" src="http://i76.photobucket.com/albums/j4/mka-10/BP%201.0_zpsrk8ehoxl.png" border="0" alt=" photo BP 1.0_zpsrk8ehoxl.png"/>
-      <a href="/">Home</a>
-      <a href="/about">About Us</a>
+        <img id="logo" src="http://i76.photobucket.com/albums/j4/mka-10/BP%201.0_zpsrk8ehoxl.png" border="0" alt=" photo BP 1.0_zpsrk8ehoxl.png"/>
+        <a class="footerlinks" href="/">HOME</a>
+        <a class="footerlinks" href="/about">ABOUT US</a>
       </footer>
     {% endblock %}
 
   </body>
   
-
 </html>

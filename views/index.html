@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 {% block mainContent %}
-  <div id = "splash" class="splash">
+  <div id ="splash" class="splash">
     <h1 id="splashhead" class="splashhead">
       Welcome to EventLand.
     </h1>
     <h2 class = "subsplashhead">
       The premier website for event organization.
     </h2>
-      <a href="#secondhalf" class="bounce"><span class=" splashhead glyphicon glyphicon-chevron-down"></span></a>
+    <a href="#secondhalf" class="bounce"><span class="splashhead glyphicon glyphicon-chevron-down"></span></a>
   </div>
   <div class="splash" id="secondhalf">
     <h1 class = "currentevents">Current Events</h1>
@@ -19,8 +19,6 @@
     <div class="eventlist">
        {% include "fragments/events-list.html" %}
     </div>
-    
-   
   </div>
   
     <!-- Load the Content Experiment JavaScript API client for the experiment -->
