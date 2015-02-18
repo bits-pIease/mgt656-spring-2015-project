@@ -108,8 +108,24 @@ a {
   text-align: center;
   display:inline-block;
 }
+.subhead{
+  color: white;
+  text-align: center;
+  font-size: 5em;
+  font-style: bold;
+  padding-top: 10%;
+  font-family: 'Libre Baskerville', serif;
+}
 .event{
   width: 30%;
+}
+.eventpage{
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }
 /*IDs*/
 #logo{
