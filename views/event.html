@@ -5,7 +5,11 @@
     {% include "fragments/events-list.html" %}
   </div>
   <div>
-    <a href="/events/new">Create a new event</a>
+    <div class="createnew">
+       <a href="/events/new" id = "new" class="btn btn-default btn-lg">
+       <span class="glyphicon glyphicon-plus"></span> Create a new Event
+    </a>
+    </div>
   </div>
 
 {% endblock %}

@@ -1,9 +1,15 @@
-<ul>
-  {% for event in events %}
-    <li class="event" id="event-{{eventid}}">
-      <a href="/events/{{event.id}}" onClick="_gaq.push(['_trackEvent', 'RSVP', 'click', 'homepage']);">{{event.title}}</a>.
+
+<ol style="padding: 20px; float:left; margin: 0 10px; padding: 0 10px;list-style-type:none;">
+  
+{% for event in events %}
+    <li style="float:left; margin: 0 10px; padding: 0 10px;" class="col-xs-12 col-sm-6 col-sm-offset-4 col-mid-4 event" id="event-{{eventid}}">
+     <div class = "homepage_event">
+      <a class="title" href="/events/{{event.id}}" onClick="_gaq.push(['_trackEvent', 'RSVP', 'click', 'homepage']);" >{{event.title}}</a>.
+      <img id = "image" src={{event.image}}><br>
       <time datetime="{{event.date}}">{{event.date|prettyDate}}</time>
-      {{event.attending.length}} attending so far.
+      <p>{{event.attending.length}} attending so far.</p>
+    </div>
+       
     </li>
-  {% endfor %}
-</ul>
+{% endfor %}
+</ol>

@@ -1,19 +1,26 @@
 {% extends "layout.html" %}
-
-{% block header %}
-  <header>
-    <h1>{{ title }} FTW</h1>
-  </header>
-{% endblock %}
-
 {% block mainContent %}
-  <p>
-    Welcome to {{ title }}. {{tagline}}
-  </p>
-  <img id="logo" src="http://i76.photobucket.com/albums/j4/mka-10/BP%201.0_zpsrk8ehoxl.png" border="0" alt=" photo BP 1.0_zpsrk8ehoxl.png"/>
-  <p>Current Events</p>
-  <div>
-     {% include "fragments/events-list.html" %}
+  <div id = "splash" class="splash">
+    <h1 id="splashhead" class="splashhead">
+      Welcome to EventLand.
+    </h1>
+    <h2 class = "subsplashhead">
+      The premier website for event organization.
+    </h2>
+      <a href="#secondhalf" class="bounce"><span class=" splashhead glyphicon glyphicon-chevron-down"></span></a>
+  </div>
+  <div class="splash" id="secondhalf">
+   
+    <h1 class = "currentevents">Current Events</h1>
+    <div class="eventlist">
+       {% include "fragments/events-list.html" %}
+    </div>
+    <div class="createnew">
+       <a href="/events/new" id = "new" class="btn btn-default btn-lg">
+       <span class="glyphicon glyphicon-plus"></span> Create a new Event
+    </a>
+    </div>
+   
   </div>
   <p>
     Check out the <a href="/about">About us</a> page
@@ -51,5 +58,4 @@
     
   });
   </script>
-  
 {% endblock %}

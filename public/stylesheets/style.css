@@ -1,10 +1,28 @@
+#container{
+    margin: 0;
+    padding: 0;
+}
+
+
+p, ol, li, .sprintheader{
+  color: white;
+}
+
+
 body {
-  padding: 50px;
+  background-image: url('http://i.imgur.com/fUneskT.png');
+  margin: 0;
+  padding: 0;
+  color: white;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+.aboutimg{
+  	border-radius: 150px;
+
 }
 .form-errors {
 	color: red;
@@ -27,9 +45,109 @@ a {
 }
 .header{
   top:0px;
+  margin:0;
+  padding:0;
   position: relative;
   background-color: #DDDDDD;
 }
 .name{
   font-weight: bold;
+}
+.splash{
+  width: 100vw;
+  height:100vh;
+  z-index: 1;
+}
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.rightmost{
+  right: 100px;
+}
+.splashhead{
+  color: white;
+  text-align: center;
+  font-size: 5em;
+  font-style: bold;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 17%;
+}
+.createnew{
+    padding-top: 20%;
+
+}
+.eventlist{
+  padding-top: 5%;
+}
+.currentevents{
+  color: white;
+  text-align: center;
+  font-size: 5em;
+  font-style: bold;
+  padding-top: 10%;
+  font-family: 'Libre Baskerville', serif;
+}
+.subsplashhead{
+  color: #AAAAAA;
+  text-align: center;
+  font-size: 2em;
+  font-style: bold;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 0;
+}
+.title{
+  font-size: 2em;
+  font-style: bold;
+  font-family:"Arimo";
+  color: #7FDBFF;
+}
+.homepage_event{
+  text-align: center;
+  display:inline-block;
+}
+.event{
+  width: 30%;
+}
+/*IDs*/
+#logo{
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+}
+#head{
+  padding:0;
+  margin:0;
+}
+
+#image{
+  width: 480px;
+  height: 262px;
+}
+#splash{
+  padding-top: 1px;
+  margin-top: 0;
+}
+
+
+/*From Internet*/
+
+.bounce {
+  position:absolute;
+  left:49%;
+  height:50px;
+  width:50px;
+  -webkit-animation:bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%       { bottom:25%; }
+  25%, 75% { bottom:26%; }
+  50%      { bottom:27%; }
+  100%     {bottom:25%;}
 }
