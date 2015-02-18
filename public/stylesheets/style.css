@@ -76,11 +76,16 @@ a {
   padding-top: 17%;
 }
 .createnew{
-    padding-top: 20%;
-
+  padding-top: 20%;
+  width: 40%;
+  margin-left: auto ;
+  margin-right: auto ;
 }
 .eventlist{
   padding-top: 5%;
+  width: 85% ;
+  margin-left: auto ;
+  margin-right: auto ;
 }
 .currentevents{
   color: white;
