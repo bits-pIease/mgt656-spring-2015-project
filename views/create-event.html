@@ -3,20 +3,21 @@
 {% block mainContent %}
   
   <h1 class="subhead"> New Event </h1>
+  
   <div class="container">
     {% if errors %}
-      <div class="form-errors">
-        <p>Please correct the following errors!</p>
-        <ul>
+      <div class="form-errors text-center">
+        <p class="create-error">Please correct the following errors!</p>
+        <ul id="create-errors">
           {% for error in errors %}
-            <li>{{error}}</li>
+            <li class="create-error">{{error}}</li>
           {% endfor %}
         </ul>
       </div>
     {% endif %}
   </div>
 
-	<form role="form" class = "eventlist" id="create-event" method="POST">
+	<form role="form" class ="eventlist" id="create-event" method="POST">
   	<div class="form-group" >
       <label for="title">Event title:</label>
       <input class="form-control" type="text" name="title">

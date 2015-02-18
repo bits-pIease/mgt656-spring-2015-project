@@ -4,8 +4,6 @@
     width: 100%;
 }
 
-
-
 p, ol, li, span, .sprintheader{
   color: white;
 }
@@ -25,9 +23,13 @@ body {
 a {
   color: #00B7FF;
 }
+
 .aboutimg{
   	border-radius: 150px;
 
+}
+.create-error{
+  color: red;
 }
 .form-errors {
 	color: red;
@@ -84,7 +86,7 @@ a {
  padding-top: 2%;
 }
 .eventlist{
-  padding-top: 5%;
+  padding-top: 4%;
   width: 85% ;
   margin-left: auto ;
   margin-right: auto ;
@@ -156,7 +158,9 @@ a {
 #create-event{
   color: white;
   margin: 0 auto;
-  padding: 0 auto;
+  padding-top: 0%;
+  padding-bottom: 2%;
+  width: 50% ;
 }
 
 #about-title{
@@ -214,6 +218,19 @@ a {
 #label{
   color: white;
   font-family: 'Libre Baskerville', serif;
+}
+
+#submit{
+  color: black;
+}
+
+#create-errors{
+  padding-right: 40px;
+}
+
+#new{
+  font-weight: 800;
+  color: #00B7FF;
 }
 
 /*From Internet*/
