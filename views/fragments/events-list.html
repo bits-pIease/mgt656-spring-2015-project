@@ -1,7 +1,7 @@
 <ol>
   
 {% for event in events %}
-    <li>
+    <li class="event" id="event-{{eventid}}">
      <div class = ".col-sm-6 col-mid-4 event homepage_event" id="event-{{eventid}}">
       <a class="title" href="/events/{{event.id}}">{{event.title}}</a>.
       <img id = "image" src={{event.image}}><br>
