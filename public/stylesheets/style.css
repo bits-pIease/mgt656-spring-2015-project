@@ -20,6 +20,10 @@ body {
 a {
   color: #00B7FF;
 }
+.aboutimg{
+  	border-radius: 150px;
+
+}
 .form-errors {
 	color: red;
 }
