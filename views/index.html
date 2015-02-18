@@ -10,16 +10,16 @@
       <a href="#secondhalf" class="bounce"><span class=" splashhead glyphicon glyphicon-chevron-down"></span></a>
   </div>
   <div class="splash" id="secondhalf">
-   
     <h1 class = "currentevents">Current Events</h1>
+    <div class="createnew" style="text-align: center">
+      <a href="/events/new" id = "new" class="btn btn-default btn-lg">
+       <span class="glyphicon glyphicon-plus"></span> Event
+      </a>
+    </div>
     <div class="eventlist">
        {% include "fragments/events-list.html" %}
     </div>
-    <div class="createnew">
-      <a href="/events/new" id = "new" class="btn btn-default btn-lg">
-       <span class="glyphicon glyphicon-plus"></span> Create a new Event
-      </a>
-    </div>
+    
    
   </div>
   

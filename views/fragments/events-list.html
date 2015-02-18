@@ -7,7 +7,7 @@
       <a class="title" href="/events/{{event.id}}" onClick="_gaq.push(['_trackEvent', 'RSVP', 'click', 'homepage']);" >{{event.title}}</a> <br>
       <img id = "image" src={{event.image}}><br>
       <time datetime="{{event.date}}">{{event.date|prettyDate}}</time>
-      <p>{{event.attending.length}} attending so far.</p>
+      <p><span style="color: #2ECC40">{{event.attending.length}} attending so far.</span></p>
     </div>
        
     </li>
