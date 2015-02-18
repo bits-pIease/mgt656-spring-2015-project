@@ -115,7 +115,7 @@ a {
   text-align: center;
   font-size: 5em;
   font-style: bold;
-  padding-top: 10%;
+  padding-top: 5%;
   font-family: 'Libre Baskerville', serif;
 }
 .event{
@@ -146,6 +146,11 @@ a {
 }
 #splash{
   margin-top: 0;
+}
+#create-event{
+  color: white;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 
