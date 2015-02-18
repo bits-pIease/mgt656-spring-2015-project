@@ -140,7 +140,7 @@ function rsvp (request, response){
     response.redirect('/events/' + ev.id);
   }else{
     var contextData = {errors: [], event: ev};
-    contextData.errors.push('Invalid email');
+    contextData.errors.push('Invalid email, make sure it is a @yale.edu!');
     response.render('event-detail.html', contextData);    
   }
 }

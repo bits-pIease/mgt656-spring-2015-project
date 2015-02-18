@@ -41,7 +41,6 @@ var allEvents = [
   }
 ];
 
-
 /**
  * Returns the first event that has a particular id.
  */
