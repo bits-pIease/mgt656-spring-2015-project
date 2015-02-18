@@ -1,7 +1,7 @@
-<ol>
+<ol style="padding: 20px; float:left; margin: 0 10px; padding: 0 10px;list-style-type:none;">
   
 {% for event in events %}
-    <li class="col-xs-12 col-sm-6 col-sm-offset-3 col-mid-4 event" id="event-{{eventid}}">
+    <li style="float:left; margin: 0 10px; padding: 0 10px;" class="col-xs-12 col-sm-6 col-sm-offset-4 col-mid-4 event" id="event-{{eventid}}">
      <div class = "homepage_event">
       <a class="title" href="/events/{{event.id}}">{{event.title}}</a>.
       <img id = "image" src={{event.image}}><br>
