@@ -34,7 +34,7 @@
   var pageVariations = [
     function() {},  // Original: Do nothing. This will render the default HTML.
     function() {    // Variation 1: add RSVP text
-      $( 'li.event a' ).text( 'RSVP for' )
+      $( 'li.event a' ).text.prepend( 'RSVP for ' )
     }
   ];
    
