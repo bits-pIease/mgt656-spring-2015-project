@@ -1,5 +1,11 @@
+.container{
+    margin: 0;
+    padding: 0;
+}
 body {
-  padding: 50px;
+  /*padding: 50px;*/
+  margin: 0px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -32,4 +38,25 @@ a {
 }
 .name{
   font-weight: bold;
+}
+.splash{
+  width: 100vw;
+  height:100vh;
+  background-image: url('http://yalantis.com/blog/wp-content/uploads/2014/06/Live-Events-01.jpg');
+}
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+/*IDs*/
+#logo{
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+
 }

@@ -1,25 +1,42 @@
 {% extends "layout.html" %}
+  <script>
+    // Define JavaScript for each page variation of this experiment.
+    var pageVariations = [
+      function() {},  // Original: Do nothing. This will render the default HTML.
+      function() {    // Variation 1: add RSVP text
+        $( 'li.event' ).prepend( 'RSVP ' );
+      }
+    ];
+     
+    // Wait for the DOM to load, then execute the view for the chosen variation.
+    $(document).ready(function(){
+      // Ask Google Analytics which variation to show the user.
+      var chosenVariation = cxApi.chooseVariation('ApHQS_bRRteQ98DOfFhgtA');
+      
+      console.log('chosenVariation =', chosenVariation);
+     
+      // Execute the chosen view
+      pageVariations[chosenVariation]();
+      
+    });
+  </script>
 
-{% block header %}
-  <header>
-    <h1>{{ title }} FTW</h1>
-  </header>
-{% endblock %}
 
 {% block mainContent %}
-  <p>
-    Welcome to {{ title }}. {{tagline}}
-  </p>
-  <img id="logo" src="http://i76.photobucket.com/albums/j4/mka-10/BP%201.0_zpsrk8ehoxl.png" border="0" alt=" photo BP 1.0_zpsrk8ehoxl.png"/>
-  <p>Current Events</p>
-  <div>
-     {% include "fragments/events-list.html" %}
+  <div class="splash">
+    <h1>
+      Welcome to {{ title }}. {{tagline}}
+    </h1>
+    <p class="penis">Current Events</p>
+    <div>
+       {% include "fragments/events-list.html" %}
+    </div>
+    <p>
+      Check out the <a href="/about">About us</a> page
+      as well as the <a href="/events">Events</a> page.
+    </p>
+    <p>
+      <a id="new" href="/events/new">Create a new event</a>
+    </p>
   </div>
-  <p>
-    Check out the <a href="/about">About us</a> page
-    as well as the <a href="/events">Events</a> page.
-  </p>
-  <p>
-    <a id="new" href="/events/new">Create a new event</a>
-  </p>
 {% endblock %}
