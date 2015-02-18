@@ -1,12 +1,12 @@
 <ol>
   
 {% for event in events %}
-    <li class=".col-sm-4 col-mid-4 event" id="event-{{eventid}}">
+    <li class="col-xs-12 col-sm-6 col-sm-offset-3 col-mid-4 event" id="event-{{eventid}}">
      <div class = "homepage_event">
       <a class="title" href="/events/{{event.id}}">{{event.title}}</a>.
       <img id = "image" src={{event.image}}><br>
       <time datetime="{{event.date}}">{{event.date|prettyDate}}</time>
-      {{event.attending.length}} attending so far.
+      <p>{{event.attending.length}} attending so far.</p>
     </div>
        
     </li>
