@@ -25,6 +25,7 @@
   
     <!-- Load the Content Experiment JavaScript API client for the experiment -->
   <script src="//www.google-analytics.com/cx/api.js?experiment=HX0LgK31Q3iuzO_VBn3Fng"></script>
+
    
   <!-- Load the JQuery library -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -34,7 +35,7 @@
   var pageVariations = [
     function() {},  // Original: Do nothing. This will render the default HTML.
     function() {    // Variation 1: add RSVP text
-      $( 'li.event' ).prepend( 'RSVP ' );
+      $( 'li.event a' ).text( 'RSVP' )
     }
   ];
    
