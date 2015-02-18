@@ -1,10 +1,12 @@
 #container{
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 
-p, ol, li, .sprintheader{
+
+p, ol, li, span, .sprintheader{
   color: white;
 }
 
@@ -133,6 +135,7 @@ a {
   padding-top: 1px;
   margin-top: 0;
 }
+
 
 
 /*From Internet*/
