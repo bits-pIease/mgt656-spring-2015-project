@@ -1,33 +1,63 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-    <h1 class="sprintheader" id="title">{{event.title}}</h1>
-    <span id="date">{{event.date}}</span>
-    <span id="location">{{event.location}}</span>
-    <img id = "image" src={{event.image}}>
-    <h3> Attending </h3>
-    <ul id="attendees">
-        {% for person in event.attending %}
-            <li> {{ person }} </li>
-        {% endfor %}
-    </ul>
-     {% if errors %}
-        <div class="form-errors">
-          <p>Please correct the following errors!</p>
-          <ul class="form-errors">
-            {% for error in errors %}
-              <li>{{error}}</li>
-            {% endfor %}
-          </ul>
+    
+    <div class="container">
+        <h1 class="sprintheader" id="title">{{event.title}}</h1>
+    </div>
+    
+    <div class="container">
+        <img class="center-block" id="image" src={{event.image}}>
+    </div>
+    <div class="container">
+        <div class="col text-center">
+            <time datetime="{{event.date}}">
+                <span id="date">{{event.date|prettyDate}}</span>
+            </time>
         </div>
-      {% endif %}
-  
-    <h2> RSVP?</h2>
-	<form id="rsvptoevent" method="POST">
-        <label for="email">Your email:</label>
-        <input id="email" type="email" name="email">
-        <button type="submit" value="Submit"> RSVP </button>
-    </form>
+        <div class="col text-center">
+            <span id="location">{{event.location}}</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col text-center">
+            <h3 id="attending"> Attending </h3>
+        </div>
+        <div class="col text-center">
+            <ul id="attendees">
+                {% for person in event.attending %}
+                    <li> {{ person }} </li>
+                {% endfor %}
+            </ul>
+        </div>
+         {% if errors %}
+            <div class="form-errors">
+              <p>Please correct the following errors!</p>
+              <ul class="form-errors">
+                {% for error in errors %}
+                  <li>{{error}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+     </div>
+      
+    <div class="container">
+        <div class="col text-center">
+            <h2 id="rsvp"> RSVP?</h2>     
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col text-center">
+            <form id="rsvptoevent" method="POST">
+                <label id="label" for="email">Your email:</label>
+                <input id="email" type="email" name="email">
+                <button type="submit" value="Submit"> RSVP </button>
+            </form>
+        </div>
+    </div>
     
     <!-- Load the Content Experiment JavaScript API client for the experiment -->
     <script src="//www.google-analytics.com/cx/api.js?experiment=nPwvf40TSjWYQM4soaf8lg"></script>

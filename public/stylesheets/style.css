@@ -1,13 +1,18 @@
 #container{
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 
-p, ol, li, .sprintheader{
+
+p, ol, li, span, .sprintheader{
   color: white;
 }
 
+ul {
+  list-style-type: none;
+}
 
 body {
   background-image: url('http://i.imgur.com/fUneskT.png');
@@ -153,6 +158,62 @@ a {
   padding: 0 auto;
 }
 
+#about-title{
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: 4em;
+  color: white;
+  font-style: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+
+#names{
+  font-size: 1.75em;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+#title{
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: 3em;
+  font-style: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+
+#image{
+  padding-bottom: 10px;
+}
+
+#attending{
+  color: white;
+  font-size: 2em;
+  font-style: bold;
+  font-family: 'Libre Baskerville', serif;  
+}
+
+#attendees{
+  font-style: italic;
+  padding-right: 40px;
+}
+
+#rsvp{
+  color: white;
+  font-size: 2em;
+  font-style: bold;
+  font-family: 'Libre Baskerville', serif;  
+}
+
+#rsvptoevent{
+  padding-right: 40px;
+  padding-bottom: 50px;
+}
+
+#label{
+  color: white;
+  font-family: 'Libre Baskerville', serif;
+}
 
 /*From Internet*/
 
