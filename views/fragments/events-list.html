@@ -1,7 +1,7 @@
 <ul>
   {% for event in events %}
     <li class="event" id="event-{{eventid}}">
-      <a href="/events/{{event.id}}">{{event.title}}</a>.
+      <a href="/events/{{event.id}}"onClick="_gaq.push(['_trackEvent', 'RSVP', 'click', 'homepage'])>{{event.title}}</a>.
       <time datetime="{{event.date}}">{{event.date|prettyDate}}</time>
       {{event.attending.length}} attending so far.
     </li>
