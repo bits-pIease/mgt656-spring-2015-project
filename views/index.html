@@ -23,16 +23,24 @@
 
 
 {% block mainContent %}
-  <div class="splash">
-    <h1 class="splashhead">
-      Welcome to {{ title }}.
+  <div id = "splash" class="splash">
+    <h1 id="splashhead" class="splashhead">
+      Welcome to EventLand.
     </h1>
+    <h2 class = "subsplashhead">
+      The premier website for event organization.
+    </h2>
+      <a href="#secondhalf" class="bounce"><span class=" splashhead glyphicon glyphicon-chevron-down"></span></a>
+  </div>
+  <div class="splash" id="secondhalf">
+    <a href="/events/new" id = "new" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-plus"></span> Create a new Event
+    </a>
     <h1>Current Events</h1>
     <div>
        {% include "fragments/events-list.html" %}
     </div>
-    <a href="/events/new"  class="btn btn-default btn-lg">
-      <span class="glyphicon glyphicon-plus"></span> Create a new Event
-    </a>
+    <br>
+   
   </div>
 {% endblock %}

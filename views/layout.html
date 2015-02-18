@@ -9,7 +9,7 @@
     <!-- Load the Content Experiment JavaScript API client for the experiment -->
     <script src="//www.google-analytics.com/cx/api.js?experiment=ApHQS_bRRteQ98DOfFhgtA"></script>
     <!--Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <!-- Load the JQuery library -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <!--Google Analytics -->
@@ -28,17 +28,17 @@
 	<body>
 
     {% block header %}
-      <header class = "navbar navbar-default header"> 
+      <header id="head" class = "navbar navbar-default header"> 
           <ul class="nav navbar-nav navbar-left">
               <li><a href="/">Bits Please</a></li>
           </ul>
           <ul style="padding-right: 1%"class="nav nav-pills navbar-right rightmost">
-            <li role="presentation" class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                Sprint Reports <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li> <a href="sprint1"> Sprint 1</a></li>
-                <li> <a href="sprint2"> Sprint 2</a></li> 
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Sprint 1</a></li>
+                <li><a href="#">Sprint 2</a></li>
+                <li><a href="#">Sprint 3</a></li>
               </ul>
             </li>
             <li><a href="/about">About</a></li>
