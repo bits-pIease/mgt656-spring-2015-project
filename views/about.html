@@ -1,15 +1,35 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-    <p>This is the about us page</p>
-    <p>Team members: 
-        <span id="ok-penguin-name">Mohammed Abul</span>, 
-        <span id="wild-mallard-name">Henok Addis</span>,
-        <span id="careful-pigeon-name">Arthur Klisz</span>
-    </p>
-    <p>
-        <img class = "aboutimg col-xs-12 col-sm-4 col-med-4" src="http://www.threestooges.com/wp-content/uploads/2012/12/MoeHoward.jpg" id="ok-penguin-headshot">
-        <img class = "aboutimg col-xs-12 col-sm-4 col-med-4" src="http://www.threestooges.com/wp-content/uploads/2012/12/LarryFine.jpg" id="wild-mallard-headshot">
-        <img class = "aboutimg col-xs-12 col-sm-4 col-med-4" src="http://www.threestooges.com/wp-content/uploads/2012/12/CurlyHoward.jpg" id="careful-pigeon-headshot">
-    </p>
+
+    <div class="container" id="about-title">
+        <div class="col text-center">
+            The Squad
+        </div>
+    </div>
+
+    <div class="container" id="pictures">
+        <div id="moe">
+            <img class = "aboutimg col-xs-12 col-sm-4 col-med-4" src="http://www.threestooges.com/wp-content/uploads/2012/12/MoeHoward.jpg" id="ok-penguin-headshot">        
+        </div>
+        <div id="larry">
+            <img class = "aboutimg col-xs-12 col-sm-4 col-med-4" src="http://www.threestooges.com/wp-content/uploads/2012/12/LarryFine.jpg" id="wild-mallard-headshot">      
+        </div>
+        <div id="curly">
+            <img class = "aboutimg col-xs-12 col-sm-4 col-med-4" src="http://www.threestooges.com/wp-content/uploads/2012/12/CurlyHoward.jpg" id="careful-pigeon-headshot">      
+        </div>
+    </div>
+    
+    <div class="container" id="names">
+        <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+            <span id="ok-penguin-name">Mohammed Abul</span>,
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+            <span id="wild-mallard-name">Henok Addis</span>,
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+            <span id="careful-pigeon-name">Arthur Klisz</span>,
+        </div>
+    </div>
+    
 {% endblock %}
