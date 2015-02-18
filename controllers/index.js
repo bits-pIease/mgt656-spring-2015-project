@@ -27,10 +27,13 @@ function sprint2(request, response){
 function sprint(request, response){
   response.render('sprint.html');
 }
-
+function sprint3(request, response){
+  response.render('sprint3.html');
+}
 
 module.exports = {
   index: index,
   'sprint': sprint,
-  'sprint2' : sprint2
+  'sprint2' : sprint2,
+  'sprint3': sprint3
 };
